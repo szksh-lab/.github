@@ -1,0 +1,8 @@
+issuer: https://token.actions.githubusercontent.com
+subject: repo:szksh-lab/.*:pull_request
+repositories:
+  - example-octo-sts
+  - example-octo-sts-2
+permissions:
+  contents: read
+  pull_requests: write
