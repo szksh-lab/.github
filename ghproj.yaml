@@ -1,0 +1,17 @@
+---
+# ghproj https://github.com/suzuki-shunsuke/ghproj
+entries:
+  - query: |
+      is:open
+      -project:szksh-lab/1
+      archived:false
+      owner:suzuki-shunsuke
+      owner:aquaproj
+      owner:lintnet
+      is:public
+    expr: |
+      (! Item.Repo.IsFork) &&
+      (Item.Title != "Dependency Dashboard") &&
+      ! (Item.Repo.Name startsWith "homebrew-") &&
+      ! (Item.Repo.Name startsWith "test-")
+    project_id: PVT_kwDOCabuec4AlJMy
