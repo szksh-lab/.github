@@ -7,6 +7,9 @@ entries:
       archived:false
       -project:szksh-lab/1
       owner:lintnet
+      owner:aquaproj
+      owner:tfmigrator
+      owner:suzuki-shunsuke
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
