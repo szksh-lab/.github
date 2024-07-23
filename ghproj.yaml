@@ -3,12 +3,10 @@
 entries:
   - query: |
       is:open
-      -project:szksh-lab/1
-      archived:false
-      owner:suzuki-shunsuke
-      owner:aquaproj
-      owner:lintnet
       is:public
+      archived:false
+      -project:szksh-lab/1
+      owner:lintnet
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
