@@ -16,3 +16,10 @@ entries:
       ! (Item.Repo.Name startsWith "homebrew-") &&
       ! (Item.Repo.Name startsWith "test-")
     project_id: PVT_kwDOCabuec4AlJMy
+  - query: |
+      is:open
+      is:public
+      archived:false
+      -project:szksh-lab/1
+      author:suzuki-shunsuke
+    project_id: PVT_kwDOCabuec4AlJMy
