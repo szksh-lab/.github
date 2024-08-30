@@ -31,17 +31,8 @@ jobs:
       - run: ghproj add
         env:
           GITHUB_TOKEN: ${{steps.token.outputs.token}}
-      - run: |
-          state=$(gh issue view "$ISSUE_NUMBER" --json state -q .state)
-          if [ "$state" = "CLOSED" ]; then
-            gh issue reopen "$ISSUE_NUMBER" -c "CI failed. $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-          fi
-        if: failure()
-        env:
-          ISSUE_NUMBER: "1"
-          GITHUB_TOKEN: ${{github.token}}
-      - run: |
-          gh issue close "$ISSUE_NUMBER"
-        env:
-          ISSUE_NUMBER: "1"
-          GITHUB_TOKEN: ${{github.token}}
+      - uses: suzuki-shunsuke/notify-workflow-error-action@e5e8817e62eb122231d162dbc8309c4d05a21b2e # v0.1.0
+        if: always()
+        with:
+          issue_number: "1"
+          status: ${{ job.status }}
