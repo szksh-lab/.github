@@ -10,6 +10,7 @@ entries:
       owner:aquaproj
       owner:tfmigrator
       owner:suzuki-shunsuke
+      owner:techblog-szksh-cloud
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
