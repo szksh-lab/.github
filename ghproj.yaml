@@ -24,10 +24,24 @@ entries:
       -project:szksh-lab/1
       assignee:suzuki-shunsuke
     project_id: PVT_kwDOCabuec4AlJMy
+    expr: |
+      (! Item.Repo.IsFork) &&
+      (Item.Title != "Dependency Dashboard") &&
+      ! (Item.Repo.Name startsWith "homebrew-") &&
+      ! (Item.Repo.Name startsWith "test-")
   - query: |
       is:open
       is:public
       archived:false
       -project:szksh-lab/1
       author:suzuki-shunsuke
+    project_id: PVT_kwDOCabuec4AlJMy
+    expr: |
+      (! Item.Repo.IsFork) &&
+      (Item.Title != "Dependency Dashboard") &&
+      ! (Item.Repo.Name startsWith "homebrew-") &&
+      ! (Item.Repo.Name startsWith "test-")
+  - expr: |
+      Item.Repo.IsArchived
+    action: archive
     project_id: PVT_kwDOCabuec4AlJMy
