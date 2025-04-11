@@ -21,6 +21,7 @@ entries:
       is:open
       is:public
       archived:false
+      -owner:szksh-lab-2
       -project:szksh-lab/1
       assignee:suzuki-shunsuke
     project_id: PVT_kwDOCabuec4AlJMy
@@ -33,6 +34,7 @@ entries:
       is:open
       is:public
       archived:false
+      -owner:szksh-lab-2
       -project:szksh-lab/1
       author:suzuki-shunsuke
     project_id: PVT_kwDOCabuec4AlJMy
