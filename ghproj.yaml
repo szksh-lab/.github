@@ -47,3 +47,8 @@ entries:
       Item.Repo.IsArchived
     action: archive
     project_id: PVT_kwDOCabuec4AlJMy
+  - query: |
+      is:open
+      -project:szksh-lab/2
+      repo:szksh-lab/private-task
+    project_id: PVT_kwDOCabuec4AvG0O
