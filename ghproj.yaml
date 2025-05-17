@@ -6,11 +6,13 @@ entries:
       is:public
       archived:false
       -project:szksh-lab/1
-      owner:lintnet
       owner:aquaproj
-      owner:tfmigrator
+      owner:csm-actions
+      owner:lintnet
+      owner:lintnet-modules
       owner:suzuki-shunsuke
       owner:techblog-szksh-cloud
+      owner:tfmigrator
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
