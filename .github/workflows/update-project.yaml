@@ -6,7 +6,7 @@ on:
     - cron: "*/10 * * * *"
 jobs:
   update-project:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       issues: write
     steps:
@@ -25,8 +25,6 @@ jobs:
       - uses: aquaproj/aqua-installer@11dd79b4e498d471a9385aa9fb7f62bb5f52a73c # v4.0.4
         with:
           aqua_version: v2.57.2
-        env:
-          GITHUB_TOKEN: ${{github.token}}
       - run: ghproj -v
         env:
           GITHUB_TOKEN: ${{github.token}}
