@@ -1,6 +1,7 @@
 ---
 # ghproj https://github.com/suzuki-shunsuke/ghproj
 entries:
+  # issues and prs of my OSS
   - query: |
       is:open
       is:public
@@ -13,12 +14,15 @@ entries:
       owner:suzuki-shunsuke
       owner:techblog-szksh-cloud
       owner:tfmigrator
+      -author:author:app/aquaproj-aqua-registry
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
       ! (Item.Repo.Name startsWith "homebrew-") &&
       ! (Item.Repo.Name startsWith "test-")
     project_id: PVT_kwDOCabuec4AlJMy
+
+  # issues and prs assigned to me
   - query: |
       is:open
       is:public
@@ -26,12 +30,15 @@ entries:
       -owner:szksh-lab-2
       -project:szksh-lab/1
       assignee:suzuki-shunsuke
+      -author:author:app/aquaproj-aqua-registry
     project_id: PVT_kwDOCabuec4AlJMy
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
       ! (Item.Repo.Name startsWith "homebrew-") &&
       ! (Item.Repo.Name startsWith "test-")
+
+  # issues and prs created by me
   - query: |
       is:open
       is:public
@@ -45,10 +52,15 @@ entries:
       (Item.Title != "Dependency Dashboard") &&
       ! (Item.Repo.Name startsWith "homebrew-") &&
       ! (Item.Repo.Name startsWith "test-")
+
+  # archive items of archived repos and prs created by aqua-registry-updater
   - expr: |
-      Item.Repo.IsArchived
+      Item.Repo.IsArchived or
+      (Item.Repo.Owner == "aquaproj" and Item.Repo.Name == "aqua-registry" and Item.Title startsWith "chore: update ")
     action: archive
     project_id: PVT_kwDOCabuec4AlJMy
+
+  # private-task
   - query: |
       is:open
       -project:szksh-lab/2
