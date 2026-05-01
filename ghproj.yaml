@@ -1,5 +1,6 @@
 ---
 # ghproj https://github.com/suzuki-shunsuke/ghproj
+# Exclude aquasecurity due to IP restriction. https://github.com/szksh-lab/.github/issues/429
 entries:
   - query: |
       is:open
@@ -26,6 +27,7 @@ entries:
       -owner:szksh-lab-2
       -project:szksh-lab/1
       assignee:suzuki-shunsuke
+      -owner:aquasecurity
     project_id: PVT_kwDOCabuec4AlJMy
     expr: |
       (! Item.Repo.IsFork) &&
@@ -39,6 +41,7 @@ entries:
       -owner:szksh-lab-2
       -project:szksh-lab/1
       author:suzuki-shunsuke
+      -owner:aquasecurity
     project_id: PVT_kwDOCabuec4AlJMy
     expr: |
       (! Item.Repo.IsFork) &&
