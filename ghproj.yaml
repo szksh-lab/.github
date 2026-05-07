@@ -14,7 +14,7 @@ entries:
       owner:suzuki-shunsuke
       owner:techblog-szksh-cloud
       owner:tfmigrator
-      -author:author:app/aquaproj-aqua-registry
+      -author:app/aquaproj-aqua-registry
     expr: |
       (! Item.Repo.IsFork) &&
       (Item.Title != "Dependency Dashboard") &&
@@ -30,7 +30,7 @@ entries:
       -owner:szksh-lab-2
       -project:szksh-lab/1
       assignee:suzuki-shunsuke
-      -author:author:app/aquaproj-aqua-registry
+      -author:app/aquaproj-aqua-registry
     project_id: PVT_kwDOCabuec4AlJMy
     expr: |
       (! Item.Repo.IsFork) &&
